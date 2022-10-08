@@ -1,0 +1,70 @@
+<mat-toolbar class="mat-elevation-z8">
+  <button
+    mat-icon-button
+    *ngIf="sidenav.mode === 'over'"
+    (click)="sidenav.toggle()"
+  >
+    <mat-icon *ngIf="!sidenav.opened">menu</mat-icon>
+    <mat-icon *ngIf="sidenav.opened">close</mat-icon>
+  </button>
+  <mat-icon *ngIf="volumeOn" (click)="changeVolume()">volume_off</mat-icon>
+  <mat-icon *ngIf="!volumeOn" (click)="changeVolume()">volume_up</mat-icon>
+  <div class="glitch" data-text="You merely adopted the dark. I was born in it">You merely adopted the dark. I was born
+    in it
+  </div>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+    <h4 class="name">BANE</h4>
+
+    <mat-divider></mat-divider>
+    <mat-nav-list>
+
+      <a mat-list-item [routerLink]="'/'">
+        <mat-icon>home</mat-icon>
+        <span>Home</span>
+      </a>
+
+      <a mat-list-item [routerLink]="'/contact'">
+        <mat-icon>contact_mail</mat-icon>
+        <span>Contact</span>
+      </a>
+      <a mat-list-item [routerLink]="'/info'">
+        <mat-icon>info</mat-icon>
+        <span>About</span>
+      </a>
+
+      <mat-divider></mat-divider>
+
+      <a mat-list-item [routerLink]="'/new'">
+        <mat-icon>help</mat-icon>
+        <span>Q&A</span>
+      </a>
+      <a mat-list-item [routerLink]="'/language'">
+        <mat-icon>language</mat-icon>
+        <span>Language</span>
+      </a>
+      <a mat-list-item [routerLink]="'/new'">
+        <mat-icon>money</mat-icon>
+        <span>Payment</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+      <!--
+      <mat-card>
+        <mat-card-title><div class="glitch" data-text="BANE">BANE</div></mat-card-title>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>-->
+
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
