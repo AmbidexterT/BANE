@@ -53,7 +53,7 @@
 
 ## :computer: Code Examples
 
-* `navbar.component.ts` nav component showing use of observable that is set true or false and controls if sidebar menu open or closed
+* `home.component.ts` nav component showing use of observable that is set true or false and controls if sidebar menu open or closed
 
 ```typescript
 // breakpoint observer checks if width is over 700px.

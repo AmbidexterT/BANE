@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { InfoRoutingModule } from '../info/info-routing.module';
+import { InfoModule } from '../info/info.module';
 
 const routes: Routes = [
-  /*{
-    path: 'new',
-    loadChildren: () => import('../map/map.module').then(m => m.MapModule),
-  },*/
+  {
+    path: 'info',
+    loadChildren: () => import('../info/info.module').then(m => m.InfoModule),
+  },
 ];
 
 @NgModule({
