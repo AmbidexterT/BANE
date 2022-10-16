@@ -1,3 +1,4 @@
+/*
 const string = "Welcome to this Javascript Guide!";
 const answer = "emocleW ot siht tpircsavaJ !ediuG";
 
@@ -12,3 +13,4 @@ for (let word of arrWords) {
 
 let finalString = revArrWords.join(' ');
 console.log(finalString)
+*/

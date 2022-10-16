@@ -5,13 +5,17 @@ import { InfoModule } from '../info/info.module';
 
 const routes: Routes = [
   {
+    path: '',
+    loadChildren: () => import('../home/home.module').then(m => m.HomeModule),
+  },
+  {
     path: 'info',
     loadChildren: () => import('../info/info.module').then(m => m.InfoModule),
   },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
 export class NavBarRoutingModule {

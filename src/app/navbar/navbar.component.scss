@@ -186,13 +186,7 @@ mat-sidenav {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  font-size: 2rem;
   color: rgb(255, 255, 255);
-
-  /*background-image: url('../../assets/bane_jump.gif');
-  background-size: cover;*/
-
 }
 
 .mat-card {
@@ -237,4 +231,8 @@ mat-divider {
   margin-top: 16px;
   margin-bottom: 16px;
   background-color: rgba(255, 255, 255, 0.5);
+}
+
+span {
+  color: yellow;
 }
