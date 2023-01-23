@@ -19,14 +19,6 @@
       "es2020"
     ],
     "baseUrl": "./",
-    "paths": {
-      "@pr/shared": ["src/app/shared/shared.public-api.ts"],
-      "@pr/core": ["src/app/shared/core.public-api.ts"],
-      "@pr/administration/*": ["src/app/administration/*"],
-      "@pr/compensation/*": ["src/app/compensation/*"],
-      "@pr/profile/*": ["src/app/profile/*"],
-      "@pr/promo/*": ["src/app/promo/*"],
-      "@pr/common/*": ["src/app/common/*"]
-    }
+    "paths": {}
   }
 }
