@@ -1,34 +1,32 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "sourceMap": true,
-    "declaration": false,
-    "downlevelIteration": true,
-    "experimentalDecorators": true,
-    "moduleResolution": "node",
-    "importHelpers": true,
     "target": "es2020",
     "module": "es2020",
+    "moduleResolution": "node",
+    "removeComments": true,
+    "experimentalDecorators": true,
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "importHelpers": true,
+    "downlevelIteration": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "lib": [
-      "es2020",
       "dom",
-      "es5",
-      "es6",
-      "dom.iterable"
-    ]
-  },
-  "angularCompilerOptions": {
-    "enableI18nLegacyMessageIdFormat": false,
-    "strictInjectionParameters": true,
-    "strictInputAccessModifiers": true,
-    "strictTemplates": true
+      "es2020"
+    ],
+    "baseUrl": "./",
+    "paths": {
+      "@pr/shared": ["src/app/shared/shared.public-api.ts"],
+      "@pr/core": ["src/app/shared/core.public-api.ts"],
+      "@pr/administration/*": ["src/app/administration/*"],
+      "@pr/compensation/*": ["src/app/compensation/*"],
+      "@pr/profile/*": ["src/app/profile/*"],
+      "@pr/promo/*": ["src/app/promo/*"],
+      "@pr/common/*": ["src/app/common/*"]
+    }
   }
 }

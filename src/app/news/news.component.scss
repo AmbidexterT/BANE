@@ -1,0 +1,83 @@
+.back {
+  background-color: #f9f7f1;
+  font-family: 'PT Serif', serif;
+  color: #404040;
+  padding: 0 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  font: 700 4rem/1 'Oswald', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h2 {
+  font: 3rem/.95 'Oswald', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+h3 {
+  font: 2rem/.95 'Oswald', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+time {
+  font: 700 1.5rem 'Oswald', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  border-top: 3px solid #333333;
+  border-bottom: 3px solid #333333;
+  padding: 12px 0;
+  display: block;
+}
+time sup {
+  font-size: .875rem;
+  font-weight: normal;
+}
+
+blockquote {
+  font: 1.8rem/1.25 'Oswald', sans-serif;
+  margin: 1.5rem 2rem;
+}
+blockquote::before { content: open-quote; }
+blockquote::after { content: close-quote; }
+
+@counter-style emoji {
+  symbols: "\2615";
+  system: cyclic;
+  suffix: " ";
+}
+article ul { list-style: emoji }
+
+img { filter: grayscale(100%) }
+figure {
+  margin: 0 0 12px 0;
+  text-align: center;
+}
+figcaption {
+  font-family: 'Oswald', sans-serif;
+}
+
+@media (min-width: 955px) {
+  article {
+    column-count: 3;
+    column-rule: 2px solid #333333;
+    column-gap: 42px;
+    margin-top: 36px;
+  }
+
+  blockquote { column-span: all }
+  figure { break-inside: avoid }
+  p {
+    text-align: justify;
+    hyphens: auto;
+  }
+  figure {
+    float: left;
+    margin-right: 24px;
+  }
+}

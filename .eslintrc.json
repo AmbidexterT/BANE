@@ -1,0 +1,106 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "projects/**/*"
+  ],
+  "plugins": ["unused-imports", "import"],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "parserOptions": {
+        "project": [
+          "tsconfig.json"
+        ],
+        "createDefaultProgram": true
+      },
+      "extends": [
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates",
+        "eslint:recommended"
+      ],
+      "rules": {
+        "@angular-eslint/component-selector": [
+            "error",
+            {
+                "prefix": ["cm","pr","cp","ui","md","ep","fa","ad","pv","db","nv"],
+                "style": "kebab-case",
+                "type": "element"
+            }
+        ],
+        "@angular-eslint/directive-selector": [
+            "error",
+            {
+                "prefix": ["cm","pr","cp","ui","md","ep","fa","ad","pv","db","nv"],
+                "style": "camelCase",
+                "type": "attribute"
+            }
+        ],
+        "@angular-eslint/no-output-on-prefix": 1,
+        "@angular-eslint/no-output-native": 0,
+        "unused-imports/no-unused-imports": "error",
+        "no-trailing-spaces": "error",
+        "no-console": "error",
+        "no-multiple-empty-lines": [
+            "error",
+            {
+                "max": 1,
+                "maxEOF": 1,
+                "maxBOF": 0
+            }
+        ],
+        "eol-last": ["error", "always"],
+        "no-debugger": "error",
+        "no-var": "error",
+        "prefer-const": "error",
+        "max-len": [
+            "error",
+            {
+                "code": 200
+            }
+        ],
+        "semi": ["error", "always"],
+        "no-empty": ["error"],
+        "curly": ["error"],
+        "space-before-function-paren": ["error", {
+            "anonymous": "always",
+            "named": "never",
+            "asyncArrow": "always"
+        }],
+        "no-duplicate-imports": "warn",
+        "import/order": [
+            1,
+            {
+                "newlines-between": "always",
+                "groups": [
+                    ["external", "builtin"],
+                    "internal",
+                    ["sibling", "parent", "index"]
+                ],
+                "pathGroups": [
+                    {
+                      "pattern": "@pr/**",
+                      "group": "internal"
+                    }
+                ],
+                "pathGroupsExcludedImportTypes": ["internal"]
+            }
+        ],
+        "no-prototype-builtins": "off",
+        "no-dupe-class-members": "off",
+        "no-undef": "off",
+        "no-case-declarations": "off"
+      }
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended"
+      ],
+      "rules": {}
+    }
+  ]
+}

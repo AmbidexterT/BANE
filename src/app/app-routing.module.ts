@@ -10,6 +10,10 @@ const routes: Routes = [
     path: 'info',
     loadChildren: () => import('../app/info/info.module').then(m => m.InfoModule),
   },
+  {
+    path: 'news',
+    loadChildren: () => import('../app/news/news.module').then(m => m.NewsModule),
+  },
 ];
 
 @NgModule({

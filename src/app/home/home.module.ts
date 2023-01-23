@@ -5,7 +5,6 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
-import { HomeTypingModule } from './home-typing/home-typing.module';
 
 @NgModule({
   imports: [
@@ -14,7 +13,6 @@ import { HomeTypingModule } from './home-typing/home-typing.module';
     HomeRoutingModule,
     MatCardModule,
     MatButtonModule,
-    HomeTypingModule
   ],
   declarations: [
     HomeComponent
