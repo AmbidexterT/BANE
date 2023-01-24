@@ -9,6 +9,9 @@
   </button>
   <mat-icon *ngIf="volumeOn" (click)="changeVolume()">volume_off</mat-icon>
   <mat-icon *ngIf="!volumeOn" (click)="changeVolume()">volume_up</mat-icon>
+  <audio id="bane" autoplay loop *ngIf="!volumeOn">
+    <source src="./assets/darkness_bane.mp3" type="audio/ogg" >
+  </audio>
   <div class="glitch" data-text="You merely adopted the dark. I was born in it">You merely adopted the dark. I was born in it
   </div>
 </mat-toolbar>
@@ -27,10 +30,16 @@
           <mat-icon>note</mat-icon>
           <span>News</span>
         </a>
+
         <a mat-list-item [routerLink]="'/info'">
           <mat-icon>info</mat-icon>
           <span>About</span>
         </a>
+
+      <a mat-list-item [routerLink]="'/gallery'">
+        <mat-icon>info</mat-icon>
+        <span>Gallery</span>
+      </a>
 
         <mat-divider></mat-divider>
 

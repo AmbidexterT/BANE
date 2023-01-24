@@ -1,8 +1,8 @@
-import { Component, ViewChild } from "@angular/core";
-import { BreakpointObserver } from "@angular/cdk/layout";
+import { Component, ViewChild } from '@angular/core';
+import { BreakpointObserver } from '@angular/cdk/layout';
 import { MatSidenav } from '@angular/material/sidenav';
 import { MatCardModule } from '@angular/material/card';
-import { delay } from "rxjs/operators";
+import { delay } from 'rxjs/operators';
 
 @Component({
   selector: 'app-navbar',
@@ -12,8 +12,10 @@ import { delay } from "rxjs/operators";
 export class NavbarComponent {
   @ViewChild(MatSidenav)
   sidenav!: MatSidenav;
-  volumeOn:boolean = true
-  constructor(private observer: BreakpointObserver) {}
+  volumeOn: boolean = true;
+
+  constructor(private observer: BreakpointObserver) {
+  }
 
   ngAfterViewInit() {
     this.observer
