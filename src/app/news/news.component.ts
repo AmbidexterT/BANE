@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import moment, { Moment } from 'moment';
 
 @Component({
@@ -20,10 +20,7 @@ export class NewsComponent implements OnInit {
     this.currentMonthName = this.currentDate.format('MMMM');
     this.currentDay = this.currentDate.date();
     this.currentWeekDayName = this.currentDate.format('dddd');
-
-    console.log(this.currentDate)
   }
-
 
 
 }

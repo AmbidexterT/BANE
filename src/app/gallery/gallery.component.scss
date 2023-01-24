@@ -4,9 +4,7 @@ html,body{
 }
 
 .container{
-  padding: 75px 0;
-  margin: 0 auto;
-  width: 1140px;
+  width: 1100px;
 }
 
 h1{
@@ -22,7 +20,7 @@ h1{
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 70vh;
+  height: 75vh;
 }
 
 .item {
@@ -39,22 +37,29 @@ h1{
 }
 
 .item-1 {
+
+  border: 1px white;
   background-image: url('~src/assets/bane-poster-gallery5.jpg');
 }
 
 .item-2 {
+
+  border: 1px white;
   background-image: url('~src/assets/bane-poster-gallery1.jpg');
 }
 
 .item-3 {
+  border: 1px white;
   background-image: url('~src/assets/bane-poster-gallery2.jpg');
 }
 
 .item-4 {
+  border: 1px white;
   background-image: url('~src/assets/bane-poster-gallery3.jpg');
 }
 
 .item-5 {
+  border: 1px white;
   background-image: url('~src/assets/bane-poster-gallery4.jpg');
 }
 
@@ -67,4 +72,76 @@ h1{
     display: block;
     width: 32px;
   }
+}
+
+.cursor {
+  width: 15px;
+  height: 15px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  transition-duration: 10ms;
+  transition-timing-function: ease-out;
+  //animation: cursorAnim .5s infinite alternate;
+  pointer-events: none;
+}
+
+.cursor::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  border: 8px solid gray;
+  border-radius: 50%;
+  opacity: .3;
+  top: -8px;
+  left: -8px;
+  //animation: cursorAnim2 .5s infinite alternate;
+}
+
+@keyframes cursorAnim {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(.7);
+  }
+}
+
+@keyframes cursorAnim2 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(.4);
+  }
+}
+
+@keyframes cursorAnim3 {
+  0% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  75% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+}
+
+.expand {
+  animation: cursorAnim3 .5s forwards;
+  border: 2px solid red;
+}
+
+.no-cursor {
+  cursor: none;
 }
