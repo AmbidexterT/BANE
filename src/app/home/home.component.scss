@@ -1,5 +1,18 @@
 .content--icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+blockquote {
+  font-size: 3rem;
+}
+cite {
   display: block;
-  margin-left: auto;
-  margin-right: auto
+  text-align: right;
+  font-family: Verdana, Arial, sans-serif;
+  margin-top: 1rem;
+  font-size: .9rem;
+  color: #aaa;
+  font-style: normal;
 }
