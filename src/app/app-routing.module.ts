@@ -18,6 +18,10 @@ const routes: Routes = [
     path: 'gallery',
     loadChildren: () => import('../app/gallery/gallery.module').then(m => m.GalleryModule),
   },
+  {
+    path: 'payment',
+    loadChildren: () => import('../app/payment/payment.module').then(m => m.PaymentModule),
+  },
 ];
 
 @NgModule({

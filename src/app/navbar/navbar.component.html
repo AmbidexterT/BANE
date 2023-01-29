@@ -51,7 +51,7 @@
           <mat-icon>language</mat-icon>
           <span>Language</span>
         </a>
-        <a mat-list-item [routerLink]="'/new'">
+        <a mat-list-item [routerLink]="'/payment'">
           <mat-icon>money</mat-icon>
           <span>Payment</span>
         </a>
@@ -60,6 +60,8 @@
   <mat-sidenav-content>
     <div class="content mat-elevation-z8">
       <router-outlet></router-outlet>
+
+      <div class="rights">{{ currentYear }} - All Rights Reserved - Stepan Petrov</div>
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
